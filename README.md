@@ -19,6 +19,8 @@ is included:
  - iw_cxgb4.ko
  - hfi1.ko
  - hns-roce.ko
+ - i40iw.ko
+ - irdma.ko
  - ib_qib.ko
  - mlx4_ib.ko
  - mlx5_ib.ko
