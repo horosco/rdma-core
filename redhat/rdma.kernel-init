@@ -141,6 +141,24 @@ load_hardware_modules()
 	load_modules usnic_verbs
 	RC+=$?
     fi
+    if [ "${LOAD_TECH_PREVIEW_DRIVERS}" == "yes" ]; then
+        if is_loaded i40e -a ! is_loaded i40iw; then
+           load_modules i40iw
+           RC+=$?
+        fi
+    fi
+    if [ "${LOAD_TECH_PREVIEW_DRIVERS}" == "yes" ]; then
+        if is_loaded i40e -a ! is_loaded irdma; then
+	    load_modules irdma
+	    RC+=$?
+        fi
+    fi
+    if [ "${LOAD_TECH_PREVIEW_DRIVERS}" == "yes" ]; then
+        if is_loaded ice -a ! is_loaded irdma; then
+	    load_modules irdma
+	    RC+=$?
+        fi
+    fi
     return $RC
 }
 
