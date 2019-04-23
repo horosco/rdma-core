@@ -135,6 +135,8 @@ Obsoletes: libhfi1 < %{version}-%{release}
 Obsoletes: libi40iw < %{version}-%{release}
 Provides: libipathverbs = %{version}-%{release}
 Obsoletes: libipathverbs < %{version}-%{release}
+Provides: libirdma = %{version}-%{release}
+Obsoletes: libirdma < %{version}-%{release}
 Provides: libmlx4 = %{version}-%{release}
 Obsoletes: libmlx4 < %{version}-%{release}
 Provides: libmlx5 = %{version}-%{release}
@@ -163,6 +165,7 @@ Device-specific plug-in ibverbs userspace drivers are included:
 - libhfi1: Intel Omni-Path HFI
 - libhns: HiSilicon Hip06 SoC
 - libipathverbs: QLogic InfiniPath HCA
+- libirdma: Intel Ethernet Connection RDMA
 - libmlx4: Mellanox ConnectX-3 InfiniBand HCA
 - libmlx5: Mellanox Connect-IB/X-4+ InfiniBand HCA
 - libmthca: Mellanox InfiniBand HCA
